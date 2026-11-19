@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CTG. GAME STORE — Demo</title>
+<style>
+:root{--blue:#0868f5;--navy:#10203d;--pale:#f2f7ff;--line:#d8e7ff;--muted:#68758a}
+*{box-sizing:border-box}body{margin:0;background:#eaf1fb;color:var(--navy);font-family:Arial,"Noto Sans Bengali",sans-serif}
+.phone{max-width:430px;min-height:100vh;margin:0 auto;background:#f7faff;box-shadow:0 0 35px #1b376322;position:relative;padding-bottom:92px}
+.status{height:30px;background:var(--blue);color:#062b61;padding:7px 22px;font-size:13px;display:flex;justify-content:space-between}
+header{background:white;padding:22px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e4eaf3}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:54px;height:54px;border:3px solid #101b2d;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:18px;color:var(--blue);background:#fff}.brand-name{font-size:22px;font-weight:950;letter-spacing:-1px}.brand-name span{color:var(--blue)}
+.login{border:0;background:var(--blue);color:#fff;padding:12px 20px;border-radius:9px;font-size:15px;font-weight:700}
+main{padding:18px 18px 24px}.welcome{background:linear-gradient(120deg,#0754ca,#0788ff);color:white;border-radius:16px;padding:19px;margin-bottom:22px;box-shadow:0 7px 16px #0868f533}.welcome small{opacity:.85}.welcome h1{font-size:22px;margin:7px 0}.welcome p{font-size:13px;margin:0;opacity:.9}
+.section-title{font-size:21px;font-weight:900;margin:25px 0 15px;display:flex;align-items:center;gap:10px}.section-title:before{content:"";width:6px;height:34px;border-radius:5px;background:linear-gradient(#55a1ff,#0868f5)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.offer{overflow:hidden;border:1.5px solid #a9ceff;border-radius:16px;background:white;box-shadow:0 5px 0 #9fc7f5;text-align:center}
+.art{height:120px;display:grid;place-items:center;color:white;font-weight:900;text-align:center;padding:12px;background:radial-gradient(circle at 70% 25%,#5fe6ff 0 3%,transparent 23%),linear-gradient(135deg,#062a72,#0879ee 55%,#061c4b);position:relative}
+.art:before{content:"";position:absolute;inset:10px;border:1px solid #8be7ff66;border-radius:12px}
+.art .emoji{font-size:43px;display:block;filter:drop-shadow(0 4px 3px #001b49)}.art strong{font-size:16px;text-shadow:0 2px 3px #001b49;position:relative}
+.offer-name{padding:13px 7px 15px;font-weight:700;font-size:14px;min-height:54px}
+.product{background:white;border:1px solid var(--line);border-radius:13px;padding:14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;box-shadow:0 3px 10px #173b6810}
+.product b{font-size:15px}.product small{display:block;color:var(--muted);margin-top:5px}.price{font-weight:900;color:var(--blue);font-size:16px;text-align:right}.buy{display:block;border:0;border-radius:8px;background:var(--blue);color:white;padding:8px 13px;margin-top:7px;font-weight:700}
+.notice{font-size:12px;color:var(--muted);line-height:1.6;margin:17px 2px}
+nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);background:#fff;border-top:1px solid #dce6f3;display:flex;justify-content:space-around;padding:12px 5px 17px;box-shadow:0 -6px 18px #173b6810}
+nav button{background:none;border:0;color:#657286;font-size:12px;font-weight:700;display:grid;gap:5px;justify-items:center}nav button.active{color:var(--blue)}nav span{font-size:22px}
+.toast{position:fixed;left:50%;bottom:88px;transform:translateX(-50%);background:#132746;color:white;padding:12px 16px;border-radius:10px;font-size:13px;display:none;width:max-content;max-width:90%;box-shadow:0 5px 20px #0003}
+@media(min-width:600px){body{padding:22px 0}.phone{border-radius:25px;overflow:hidden;min-height:850px}.status{height:35px}}
+</style>
+</head>
+<body>
+<div class="phone">
+ <div class="status"><span>9:56 PM</span><span>◉　 Wi-Fi　 LTE　 ▰</span></div>
+ <header>
+  <div class="brand"><div class="logo">CTG</div><div class="brand-name">CTG. <span>GAME</span><br>STORE</div></div>
+  <button class="login" onclick="notify('Login পেজটি ডেমোতে তৈরি হচ্ছে।')">Login</button>
+ </header>
+ <main>
+  <section class="welcome"><small>WELCOME TO</small><h1>CTG. GAME STORE</h1><p>আপনার পছন্দের গেম টপ-আপ এখন আরও সহজ!</p></section>
+  <div class="section-title">Special Offers</div>
+  <div class="grid">
+   <article class="offer"><div class="art"><div><span class="emoji">👍</span><strong>LIKE REWARD</strong></div></div><div class="offer-name">Like Offer</div></article>
+   <article class="offer"><div class="art"><div><span class="emoji">🎁</span><strong>FRIDAY DEAL</strong></div></div><div class="offer-name">Friday Offer</div></article>
+   <article class="offer"><div class="art"><div><span class="emoji">⚡</span><strong>WEEKLY + MONTHLY</strong></div></div><div class="offer-name">Weekly + Monthly</div></article>
+   <article class="offer"><div class="art"><div><span class="emoji">🏆</span><strong>PREMIUM REWARD</strong></div></div><div class="offer-name">Premium User</div></article>
+  </div>
+  <div class="section-title">Free Fire Top-Up</div>
+  <div class="product"><div><b>💎 100 Diamonds</b><small>Free Fire</small></div><div><div class="price">৳ ৮০</div><button class="buy" onclick="notify('ডেমো অর্ডার: 100 Diamonds')">Buy Now</button></div></div>
+  <div class="product"><div><b>💎 210 Diamonds</b><small>Free Fire</small></div><div><div class="price">৳ ১৬০</div><button class="buy" onclick="notify('ডেমো অর্ডার: 210 Diamonds')">Buy Now</button></div></div>
+  <div class="product"><div><b>💎 530 Diamonds</b><small>Free Fire</small></div><div><div class="price">৳ ৪০০</div><button class="buy" onclick="notify('ডেমো অর্ডার: 530 Diamonds')">Buy Now</button></div></div>
+  <p class="notice">এটি শুধু ডিজাইন ডেমো। এখানে দেখানো দাম নমুনা; কোনো বাস্তব অর্ডার বা পেমেন্ট নেওয়া হয় না।</p>
+ </main>
+ <nav>
+  <button class="active" onclick="notify('Home')"><span>⌂</span>Home</button>
+  <button onclick="notify('Tutorial পেজটি ডেমোতে তৈরি হচ্ছে।')"><span>▷</span>Tutorial</button>
+  <button onclick="notify('TopUp প্যাকেজগুলো উপরে দেখুন।')"><span>▦</span>TopUp</button>
+  <button onclick="notify('Contact: আপনার যোগাযোগের তথ্য পরে যোগ হবে।')"><span>♧</span>Contact</button>
+ </nav>
+ <div class="toast" id="toast"></div>
+</div>
+<script>
+let timer;
+function notify(message){const t=document.getElementById('toast');t.textContent=message;t.style.display='block';clearTimeout(timer);timer=setTimeout(()=>t.style.display='none',2400)}
+</script>
+</body></html>
